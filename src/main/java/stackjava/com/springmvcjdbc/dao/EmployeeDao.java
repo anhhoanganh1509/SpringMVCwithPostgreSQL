@@ -18,7 +18,7 @@ public class EmployeeDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public List<Employee> findAll() {
-		String sql = "SELECT * FROM EMPLOYEES";
+		String sql = "SELECT * FROM public.EMPLOYEES";
 		return jdbcTemplate.query(sql, new EmployeeMapper());
 	}
 }
